@@ -1,0 +1,26 @@
+  <app-create-employee></app-create-employee>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Command</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees; let i=index">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.age }}</td>
+        <td><app-delete-employee name="{{i}}"></app-delete-employee></td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+
+
+
+
+  <!--<div class="employees-item" *ngFor="let employee of employees | async">
+  </div>-->
